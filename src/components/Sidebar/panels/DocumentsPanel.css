@@ -1,0 +1,54 @@
+/* Clean Panel Specific Styles */
+.Clean-panel .file-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.panel-action-btn {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.panel-action-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.panel-action-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+}
+
+.panel-action-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.document-item {
+  border: 1px solid transparent;
+}
+
+.document-item:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .panel-action-btn {
+    transition: none;
+  }
+}

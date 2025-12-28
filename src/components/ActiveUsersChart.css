@@ -1,0 +1,41 @@
+.chart-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.chart-header h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.chart-icon {
+  font-size: 16px;
+}
+
+.chart-container {
+  position: relative;
+}
+
+.chart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #4a7c59;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
