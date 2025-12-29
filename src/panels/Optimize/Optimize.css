@@ -1,0 +1,639 @@
+.optimize-panel {
+  padding: 1.5rem;
+  background: #fafafa;
+  min-height: 100%;
+}
+
+.optimize-header {
+  margin-bottom: 1.5rem;
+}
+
+.optimize-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.optimize-subtitle {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.optimize-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  background: white;
+  padding: 0.375rem;
+  border-radius: 0.75rem;
+  width: fit-content;
+  border: 1px solid #e2e8f0;
+}
+
+.optimize-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  background: transparent;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.optimize-tab:hover {
+  color: #1e293b;
+}
+
+.optimize-tab.active {
+  background: #fff1f2;
+  color: #be123c;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* RAM Optimizer Styles */
+.ram-overview {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem;
+}
+
+.ram-stats {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+}
+
+.ram-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.ram-circle svg {
+  transform: rotate(-90deg);
+}
+
+.ram-circle-bg {
+  fill: none;
+  stroke: #fecdd3;
+  stroke-width: 8;
+}
+
+.ram-circle-fill {
+  fill: none;
+  stroke: #be123c;
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.5s ease;
+}
+
+.ram-circle-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ram-percent {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.ram-label {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.ram-details {
+  width: 100%;
+}
+
+.ram-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.875rem;
+}
+
+.ram-detail-row:last-child {
+  border-bottom: none;
+}
+
+.ram-detail-row span:first-child {
+  color: #64748b;
+}
+
+.ram-detail-row span:last-child {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.ram-graph {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.graph-header span {
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.graph-container {
+  height: 150px;
+  background: #fff1f2;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.graph-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+.optimize-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #be123c;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.optimize-btn:hover {
+  background: #9f1239;
+}
+
+.optimize-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.processes-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.section-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.section-desc {
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: #f1f5f9;
+  border: none;
+  border-radius: 0.375rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.refresh-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.processes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.process-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: #fafafa;
+  border-radius: 0.5rem;
+}
+
+.process-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-name {
+  font-weight: 500;
+  color: #1e293b;
+  font-size: 0.875rem;
+}
+
+.process-pid {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.process-stats {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.process-memory {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e293b;
+  min-width: 70px;
+  text-align: right;
+}
+
+.process-bar {
+  width: 100px;
+  height: 6px;
+  background: #fecdd3;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.process-bar-fill {
+  height: 100%;
+  background: #be123c;
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+/* Battery Saver Styles */
+.battery-status {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #e2e8f0;
+}
+
+.battery-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.battery-icon {
+  width: 60px;
+  height: 28px;
+  border: 2px solid #1e293b;
+  border-radius: 4px;
+  padding: 2px;
+  position: relative;
+}
+
+.battery-icon::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 12px;
+  background: #1e293b;
+  border-radius: 0 2px 2px 0;
+}
+
+.battery-level {
+  height: 100%;
+  background: #10b981;
+  border-radius: 2px;
+  transition: width 0.3s;
+}
+
+.battery-percent {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.charging-icon {
+  color: #f59e0b;
+}
+
+.battery-label {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.power-plans-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.power-plans-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.25rem;
+}
+
+.power-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.power-plan-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  background: #fafafa;
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.power-plan-btn:hover {
+  background: #f1f5f9;
+}
+
+.power-plan-btn.active {
+  border-color: #be123c;
+  background: #fff1f2;
+}
+
+.power-plan-btn span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.check-icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #be123c;
+}
+
+.throttle-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.throttle-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.bg-processes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.bg-process-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background: #fafafa;
+  border-radius: 0.5rem;
+}
+
+.bg-process-item .process-name {
+  flex: 1;
+}
+
+.process-cpu {
+  font-size: 0.8125rem;
+  color: #64748b;
+}
+
+/* Network Styles */
+.action-result {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.action-result.success {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.action-result.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.network-actions {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.network-actions h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  background: #fafafa;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.action-card:hover {
+  background: #fff1f2;
+  border-color: #fecdd3;
+}
+
+.action-card:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.action-card svg:first-child {
+  color: #be123c;
+}
+
+.action-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1e293b;
+}
+
+.action-desc {
+  font-size: 0.75rem;
+  color: #64748b;
+  text-align: center;
+}
+
+.action-loader {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: #be123c;
+}
+
+.network-info {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.network-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.interfaces-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.interface-card {
+  background: #fafafa;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.interface-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.interface-type {
+  margin-left: auto;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  background: #fff1f2;
+  border-radius: 0.25rem;
+  color: #be123c;
+  font-weight: 400;
+}
+
+.interface-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8125rem;
+}
+
+.detail-row span:first-child {
+  color: #64748b;
+}
+
+.detail-row span:last-child {
+  color: #1e293b;
+}
+
+.empty-state.small {
+  padding: 1.5rem;
+  background: #fafafa;
+  border-radius: 0.5rem;
+}
+
+.empty-state.small p {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
