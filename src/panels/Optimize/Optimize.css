@@ -1,6 +1,6 @@
 .optimize-panel {
   padding: 1.5rem;
-  background: #fafafa;
+  background: var(--background);
   min-height: 100%;
 }
 
@@ -11,12 +11,12 @@
 .optimize-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
   margin-bottom: 0.25rem;
 }
 
 .optimize-subtitle {
-  color: #64748b;
+  color: var(--foreground-muted);
   font-size: 0.875rem;
 }
 
@@ -24,11 +24,11 @@
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  background: white;
+  background: var(--card);
   padding: 0.375rem;
   border-radius: 0.75rem;
   width: fit-content;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .optimize-tab {
@@ -41,18 +41,18 @@
   border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #64748b;
+  color: var(--foreground-muted);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .optimize-tab:hover {
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .optimize-tab.active {
-  background: #fff1f2;
-  color: #be123c;
+  background: var(--primary-lighter);
+  color: var(--primary);
 }
 
 .tab-content {
@@ -69,13 +69,13 @@
 }
 
 .ram-stats {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .ram-circle {
@@ -91,13 +91,13 @@
 
 .ram-circle-bg {
   fill: none;
-  stroke: #fecdd3;
+  stroke: var(--primary-light);
   stroke-width: 8;
 }
 
 .ram-circle-fill {
   fill: none;
-  stroke: #be123c;
+  stroke: var(--primary);
   stroke-width: 8;
   stroke-linecap: round;
   transition: stroke-dasharray 0.5s ease;
@@ -115,12 +115,12 @@
 .ram-percent {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .ram-label {
   font-size: 0.875rem;
-  color: #64748b;
+  color: var(--foreground-muted);
 }
 
 .ram-details {
@@ -131,7 +131,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #f1f5f9;
+  border-bottom: 1px solid var(--border-light);
   font-size: 0.875rem;
 }
 
@@ -140,19 +140,19 @@
 }
 
 .ram-detail-row span:first-child {
-  color: #64748b;
+  color: var(--foreground-muted);
 }
 
 .ram-detail-row span:last-child {
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .ram-graph {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .graph-header {
@@ -164,12 +164,12 @@
 
 .graph-header span {
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .graph-container {
   height: 150px;
-  background: #fff1f2;
+  background: var(--primary-lighter);
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -184,7 +184,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: #be123c;
+  background: var(--primary);
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -195,7 +195,7 @@
 }
 
 .optimize-btn:hover {
-  background: #9f1239;
+  background: var(--primary-dark);
 }
 
 .optimize-btn:disabled {
@@ -204,10 +204,10 @@
 }
 
 .processes-section {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .section-header {
@@ -220,12 +220,12 @@
 .section-header h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .section-desc {
   font-size: 0.8125rem;
-  color: #64748b;
+  color: var(--foreground-muted);
   margin-top: 0.25rem;
 }
 
@@ -235,17 +235,17 @@
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  background: #f1f5f9;
+  background: var(--border-light);
   border: none;
   border-radius: 0.375rem;
-  color: #64748b;
+  color: var(--foreground-muted);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .refresh-btn:hover {
-  background: #e2e8f0;
-  color: #1e293b;
+  background: var(--border);
+  color: var(--foreground);
 }
 
 .processes-list {
@@ -259,7 +259,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1rem;
-  background: #fafafa;
+  background: var(--background);
   border-radius: 0.5rem;
 }
 
@@ -270,13 +270,13 @@
 
 .process-name {
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
   font-size: 0.875rem;
 }
 
 .process-pid {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--foreground-light);
 }
 
 .process-stats {
@@ -288,7 +288,7 @@
 .process-memory {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
   min-width: 70px;
   text-align: right;
 }
@@ -296,27 +296,27 @@
 .process-bar {
   width: 100px;
   height: 6px;
-  background: #fecdd3;
+  background: var(--primary-light);
   border-radius: 3px;
   overflow: hidden;
 }
 
 .process-bar-fill {
   height: 100%;
-  background: #be123c;
+  background: var(--primary);
   border-radius: 3px;
   transition: width 0.3s;
 }
 
 /* Battery Saver Styles */
 .battery-status {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .battery-indicator {
@@ -329,7 +329,7 @@
 .battery-icon {
   width: 60px;
   height: 28px;
-  border: 2px solid #1e293b;
+  border: 2px solid var(--foreground);
   border-radius: 4px;
   padding: 2px;
   position: relative;
@@ -343,13 +343,13 @@
   transform: translateY(-50%);
   width: 4px;
   height: 12px;
-  background: #1e293b;
+  background: var(--foreground);
   border-radius: 0 2px 2px 0;
 }
 
 .battery-level {
   height: 100%;
-  background: #10b981;
+  background: var(--success);
   border-radius: 2px;
   transition: width 0.3s;
 }
@@ -357,29 +357,29 @@
 .battery-percent {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .charging-icon {
-  color: #f59e0b;
+  color: var(--warning);
 }
 
 .battery-label {
   font-size: 0.875rem;
-  color: #64748b;
+  color: var(--foreground-muted);
 }
 
 .power-plans-section {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .power-plans-section h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
   margin-bottom: 0.25rem;
 }
 
@@ -396,7 +396,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1.25rem;
-  background: #fafafa;
+  background: var(--background);
   border: 2px solid transparent;
   border-radius: 0.75rem;
   cursor: pointer;
@@ -405,38 +405,38 @@
 }
 
 .power-plan-btn:hover {
-  background: #f1f5f9;
+  background: var(--border-light);
 }
 
 .power-plan-btn.active {
-  border-color: #be123c;
-  background: #fff1f2;
+  border-color: var(--primary);
+  background: var(--primary-lighter);
 }
 
 .power-plan-btn span {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .check-icon {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  color: #be123c;
+  color: var(--primary);
 }
 
 .throttle-section {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .throttle-section h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .bg-processes {
@@ -451,7 +451,7 @@
   align-items: center;
   gap: 1rem;
   padding: 0.75rem 1rem;
-  background: #fafafa;
+  background: var(--background);
   border-radius: 0.5rem;
 }
 
@@ -461,7 +461,7 @@
 
 .process-cpu {
   font-size: 0.8125rem;
-  color: #64748b;
+  color: var(--foreground-muted);
 }
 
 /* Network Styles */
@@ -487,16 +487,16 @@
 }
 
 .network-actions {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .network-actions h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
   margin-bottom: 1rem;
 }
 
@@ -512,8 +512,8 @@
   align-items: center;
   gap: 0.5rem;
   padding: 1.5rem 1rem;
-  background: #fafafa;
-  border: 1px solid #e2e8f0;
+  background: var(--background);
+  border: 1px solid var(--border);
   border-radius: 0.75rem;
   cursor: pointer;
   transition: all 0.2s;
@@ -521,8 +521,8 @@
 }
 
 .action-card:hover {
-  background: #fff1f2;
-  border-color: #fecdd3;
+  background: var(--primary-lighter);
+  border-color: var(--primary-light);
 }
 
 .action-card:disabled {
@@ -531,18 +531,18 @@
 }
 
 .action-card svg:first-child {
-  color: #be123c;
+  color: var(--primary);
 }
 
 .action-title {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .action-desc {
   font-size: 0.75rem;
-  color: #64748b;
+  color: var(--foreground-muted);
   text-align: center;
 }
 
@@ -550,20 +550,20 @@
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  color: #be123c;
+  color: var(--primary);
 }
 
 .network-info {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .network-info h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
   margin-bottom: 1rem;
 }
 
@@ -574,7 +574,7 @@
 }
 
 .interface-card {
-  background: #fafafa;
+  background: var(--background);
   border-radius: 0.5rem;
   padding: 1rem;
 }
@@ -584,7 +584,7 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.75rem;
-  color: #1e293b;
+  color: var(--foreground);
   font-weight: 500;
 }
 
@@ -592,9 +592,9 @@
   margin-left: auto;
   font-size: 0.75rem;
   padding: 0.25rem 0.5rem;
-  background: #fff1f2;
+  background: var(--primary-lighter);
   border-radius: 0.25rem;
-  color: #be123c;
+  color: var(--primary);
   font-weight: 400;
 }
 
@@ -611,22 +611,22 @@
 }
 
 .detail-row span:first-child {
-  color: #64748b;
+  color: var(--foreground-muted);
 }
 
 .detail-row span:last-child {
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .empty-state.small {
   padding: 1.5rem;
-  background: #fafafa;
+  background: var(--background);
   border-radius: 0.5rem;
 }
 
 .empty-state.small p {
   font-size: 0.875rem;
-  color: #64748b;
+  color: var(--foreground-muted);
 }
 
 .spinning {

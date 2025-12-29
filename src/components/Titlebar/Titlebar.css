@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: space-between;
   height: 44px;
-  background: #ffffff;
-  border-bottom: 1px solid var(--border, #e2e8f0);
+  background: var(--titlebar-bg);
+  border-bottom: 1px solid var(--border);
   -webkit-app-region: drag;
   user-select: none;
   flex-shrink: 0;
@@ -25,7 +25,7 @@
 .app-logo {
   width: 26px;
   height: 26px;
-  background: linear-gradient(135deg, #be123c, #e11d48);
+  background: var(--primary);
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -35,10 +35,14 @@
   color: white;
 }
 
+.theme-material-dark .app-logo {
+  color: #1c1b1f;
+}
+
 .titlebar-title {
   font-size: 13px;
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .titlebar-controls {
@@ -54,18 +58,18 @@
   height: 44px;
   border: none;
   background: transparent;
-  color: #64748b;
+  color: var(--foreground-muted);
   cursor: pointer;
   transition: all 0.15s ease;
 }
 
 .titlebar-btn:hover {
-  background: #f1f5f9;
-  color: #1e293b;
+  background: var(--card-hover);
+  color: var(--foreground);
 }
 
 .titlebar-btn.close:hover {
-  background: #be123c;
+  background: #dc2626;
   color: white;
 }
 

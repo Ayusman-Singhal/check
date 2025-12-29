@@ -32,12 +32,12 @@ const App: React.FC = () => {
   const ActivePanelComponent = panels[activePanel];
 
   const links = [
-    { id: 'home', label: 'Home', icon: <IconHome className="h-5 w-5 text-neutral-700 dark:text-neutral-200" /> },
-    { id: 'clean', label: 'Clean', icon: <IconTrash className="h-5 w-5 text-neutral-700 dark:text-neutral-200" /> },
-    { id: 'optimize', label: 'Optimize', icon: <IconRocket className="h-5 w-5 text-neutral-700 dark:text-neutral-200" /> },
-    { id: 'system', label: 'System', icon: <IconDeviceDesktop className="h-5 w-5 text-neutral-700 dark:text-neutral-200" /> },
-    { id: 'settings', label: 'Settings', icon: <IconSettings className="h-5 w-5 text-neutral-700 dark:text-neutral-200" /> },
-    { id: 'about', label: 'About', icon: <IconInfoCircle className="h-5 w-5 text-neutral-700 dark:text-neutral-200" /> },
+    { id: 'home', label: 'Home', icon: <IconHome className="h-5 w-5" style={{ color: 'inherit' }} /> },
+    { id: 'clean', label: 'Clean', icon: <IconTrash className="h-5 w-5" style={{ color: 'inherit' }} /> },
+    { id: 'optimize', label: 'Optimize', icon: <IconRocket className="h-5 w-5" style={{ color: 'inherit' }} /> },
+    { id: 'system', label: 'System', icon: <IconDeviceDesktop className="h-5 w-5" style={{ color: 'inherit' }} /> },
+    { id: 'settings', label: 'Settings', icon: <IconSettings className="h-5 w-5" style={{ color: 'inherit' }} /> },
+    { id: 'about', label: 'About', icon: <IconInfoCircle className="h-5 w-5" style={{ color: 'inherit' }} /> },
   ];
 
   return (
@@ -45,7 +45,7 @@ const App: React.FC = () => {
       <Titlebar title="System Utility" />
       <div className="app-content">
         <Sidebar open={open} setOpen={setOpen}>
-          <SidebarBody className="justify-between gap-10 bg-white border-r border-neutral-200">
+          <SidebarBody className="justify-between gap-10">
             <div className="flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
               <div className="flex flex-col gap-1 mt-4">
                 {links.map((link) => (

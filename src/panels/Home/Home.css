@@ -1,18 +1,18 @@
 .home-panel {
   padding: 2rem;
-  background: #fafafa;
+  background: var(--background);
   min-height: 100%;
 }
 
 .home-title {
   font-size: 1.75rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
   margin-bottom: 0.5rem;
 }
 
 .home-subtitle {
-  color: #64748b;
+  color: var(--foreground-muted);
   margin-bottom: 2rem;
 }
 
@@ -23,30 +23,30 @@
 }
 
 .stat-card {
-  background: white;
+  background: var(--card);
   border-radius: 1rem;
   padding: 1.5rem;
   display: flex;
   align-items: center;
   gap: 1rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   transition: all 0.2s;
 }
 
 .stat-card:hover {
-  border-color: #fecdd3;
-  box-shadow: 0 4px 12px rgba(190, 18, 60, 0.08);
+  border-color: var(--primary-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .stat-icon {
   width: 3rem;
   height: 3rem;
-  background: #fff1f2;
+  background: var(--primary-lighter);
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #be123c;
+  color: var(--primary);
 }
 
 .stat-info {
@@ -57,10 +57,10 @@
 .stat-value {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .stat-label {
   font-size: 0.875rem;
-  color: #64748b;
+  color: var(--foreground-muted);
 }

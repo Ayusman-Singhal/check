@@ -3,6 +3,7 @@
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  background: var(--background);
 }
 
 .app-content {
@@ -14,5 +15,5 @@
 .main-content {
   flex: 1;
   overflow-y: auto;
-  background: #f9fafb;
+  background: var(--background);
 }

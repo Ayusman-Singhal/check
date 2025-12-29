@@ -19,7 +19,12 @@ const TableHeader = React.forwardRef<
   HTMLTableSectionElement,
   React.HTMLAttributes<HTMLTableSectionElement>
 >(({ className, ...props }, ref) => (
-  <thead ref={ref} className={cn("[&_tr]:border-b", className)} {...props} />
+  <thead 
+    ref={ref} 
+    className={cn("[&_tr]:border-b", className)} 
+    style={{ backgroundColor: 'var(--card-hover)', borderColor: 'var(--border)' }}
+    {...props} 
+  />
 ));
 TableHeader.displayName = "TableHeader";
 
@@ -42,9 +47,14 @@ const TableRow = React.forwardRef<
   <tr
     ref={ref}
     className={cn(
-      "border-b transition-colors hover:bg-gray-50 data-[state=selected]:bg-gray-100",
+      "border-b transition-colors",
       className
     )}
+    style={{
+      borderColor: 'var(--border)'
+    }}
+    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--card-hover)'}
+    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
     {...props}
   />
 ));
@@ -57,9 +67,10 @@ const TableHead = React.forwardRef<
   <th
     ref={ref}
     className={cn(
-      "h-10 px-4 text-left align-middle font-medium text-gray-500 [&:has([role=checkbox])]:pr-0",
+      "h-10 px-4 text-left align-middle font-medium [&:has([role=checkbox])]:pr-0",
       className
     )}
+    style={{ color: 'var(--foreground-muted)' }}
     {...props}
   />
 ));

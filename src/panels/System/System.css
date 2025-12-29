@@ -1,6 +1,6 @@
 .system-panel {
   padding: 1.5rem;
-  background: #fafafa;
+  background: var(--background);
   min-height: 100%;
 }
 
@@ -11,12 +11,12 @@
 .system-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
   margin-bottom: 0.25rem;
 }
 
 .system-subtitle {
-  color: #64748b;
+  color: var(--foreground-muted);
   font-size: 0.875rem;
 }
 
@@ -24,11 +24,11 @@
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
-  background: white;
+  background: var(--card);
   padding: 0.375rem;
   border-radius: 0.75rem;
   width: fit-content;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .system-tab {
@@ -41,25 +41,25 @@
   border-radius: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #64748b;
+  color: var(--foreground-muted);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .system-tab:hover {
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .system-tab.active {
-  background: #fff1f2;
-  color: #be123c;
+  background: var(--primary-lighter);
+  color: var(--primary);
 }
 
 .system-section {
-  background: white;
+  background: var(--card);
   border-radius: 0.75rem;
   padding: 1.5rem;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
 }
 
 .section-header {
@@ -72,7 +72,7 @@
 .section-header h2 {
   font-size: 1rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .refresh-btn {
@@ -80,18 +80,18 @@
   align-items: center;
   gap: 0.375rem;
   padding: 0.5rem 1rem;
-  background: #f1f5f9;
+  background: var(--border-light);
   border: none;
   border-radius: 0.5rem;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
   cursor: pointer;
   transition: background 0.2s;
 }
 
 .refresh-btn:hover {
-  background: #e2e8f0;
+  background: var(--border);
 }
 
 .refresh-btn:disabled {
@@ -115,7 +115,7 @@
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  color: #94a3b8;
+  color: var(--foreground-light);
 }
 
 .loading-state svg,
@@ -130,7 +130,7 @@
 }
 
 .table-container {
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -138,10 +138,10 @@
 .scope-badge {
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  background: #fff1f2;
+  background: var(--primary-lighter);
   border-radius: 0.25rem;
   font-size: 0.75rem;
-  color: #be123c;
+  color: var(--primary);
 }
 
 .file-info {
@@ -162,7 +162,7 @@
 
 .file-name {
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -171,7 +171,7 @@
 
 .file-path {
   font-size: 0.75rem;
-  color: #94a3b8;
+  color: var(--foreground-light);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -180,7 +180,7 @@
 
 .file-size {
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .file-actions {
@@ -196,16 +196,16 @@
   width: 2rem;
   height: 2rem;
   border: none;
-  background: #f1f5f9;
+  background: var(--border-light);
   border-radius: 0.375rem;
-  color: #64748b;
+  color: var(--foreground-muted);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .action-btn:hover {
-  background: #e2e8f0;
-  color: #1e293b;
+  background: var(--border);
+  color: var(--foreground);
 }
 
 .action-btn.delete:hover {
@@ -223,19 +223,19 @@
   align-items: center;
   gap: 0.375rem;
   padding: 0.5rem 0.875rem;
-  background: white;
-  border: 1px solid #e2e8f0;
+  background: var(--card);
+  border: 1px solid var(--border);
   border-radius: 0.5rem;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .export-btn:hover {
-  background: #f8fafc;
-  border-color: #cbd5e1;
+  background: var(--card-hover);
+  border-color: var(--foreground-light);
 }
 
 .export-btn:disabled {
@@ -250,7 +250,7 @@
 }
 
 .info-card {
-  background: #fafafa;
+  background: var(--background);
   border-radius: 0.75rem;
   padding: 1rem;
 }
@@ -260,13 +260,13 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.75rem;
-  color: #be123c;
+  color: var(--primary);
 }
 
 .info-card-header h3 {
   font-size: 0.9375rem;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--foreground);
 }
 
 .info-card-content {
@@ -280,7 +280,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.375rem 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border);
 }
 
 .info-row:last-child {
@@ -289,13 +289,13 @@
 
 .info-label {
   font-size: 0.8125rem;
-  color: #64748b;
+  color: var(--foreground-muted);
 }
 
 .info-value {
   font-size: 0.8125rem;
   font-weight: 500;
-  color: #1e293b;
+  color: var(--foreground);
   text-align: right;
   max-width: 60%;
   word-break: break-word;

@@ -88,9 +88,13 @@ export const DesktopSidebar = ({
     <>
       <motion.div
         className={cn(
-          "h-full px-4 py-4 hidden md:flex md:flex-col bg-white w-[240px] shrink-0 border-r border-[#e2e8f0]",
+          "h-full px-4 py-4 hidden md:flex md:flex-col w-[240px] shrink-0",
           className
         )}
+        style={{
+          backgroundColor: 'var(--sidebar-bg)',
+          borderRight: '1px solid var(--border)'
+        }}
         animate={{
           width: animate ? (open ? "240px" : "70px") : "240px",
         }}
@@ -114,13 +118,17 @@ export const MobileSidebar = ({
     <>
       <div
         className={cn(
-          "h-10 px-4 py-4 flex flex-row md:hidden items-center justify-between bg-white w-full border-b border-[#e2e8f0]"
+          "h-10 px-4 py-4 flex flex-row md:hidden items-center justify-between w-full"
         )}
+        style={{
+          backgroundColor: 'var(--sidebar-bg)',
+          borderBottom: '1px solid var(--border)'
+        }}
         {...props}
       >
         <div className="flex justify-end z-20 w-full">
           <IconMenu2
-            className="text-[#1e293b]"
+            style={{ color: 'var(--foreground)' }}
             onClick={() => setOpen(!open)}
           />
         </div>
@@ -135,12 +143,14 @@ export const MobileSidebar = ({
                 ease: "easeInOut",
               }}
               className={cn(
-                "fixed h-full w-full inset-0 bg-white p-10 z-[100] flex flex-col justify-between",
+                "fixed h-full w-full inset-0 p-10 z-[100] flex flex-col justify-between",
                 className
               )}
+              style={{ backgroundColor: 'var(--sidebar-bg)' }}
             >
               <div
-                className="absolute right-10 top-10 z-50 text-[#1e293b]"
+                className="absolute right-10 top-10 z-50"
+                style={{ color: 'var(--foreground)' }}
                 onClick={() => setOpen(!open)}
               >
                 <IconX />
@@ -172,14 +182,15 @@ export const SidebarLink = ({
       onClick={onClick}
       className={cn(
         "flex items-center justify-start gap-2 group/sidebar py-2.5 px-3 rounded-lg transition-all w-full text-left",
-        active 
-          ? "bg-[#fff1f2] text-[#be123c]" 
-          : "text-[#64748b] hover:bg-[#f8fafc] hover:text-[#1e293b]",
         className
       )}
+      style={{
+        backgroundColor: active ? 'var(--primary-lighter)' : 'transparent',
+        color: active ? 'var(--primary)' : 'var(--foreground-muted)'
+      }}
       {...props}
     >
-      <span className={active ? "text-[#be123c]" : "text-[#64748b] group-hover/sidebar:text-[#1e293b]"}>
+      <span style={{ color: active ? 'var(--primary)' : 'var(--foreground-muted)' }}>
         {link.icon}
       </span>
 

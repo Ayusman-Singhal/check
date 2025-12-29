@@ -21,9 +21,11 @@ const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
           "peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-sm transition-colors",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
           "disabled:cursor-not-allowed disabled:opacity-50",
-          checked ? "bg-[#be123c]" : "bg-[#e2e8f0]",
           className
         )}
+        style={{
+          backgroundColor: checked ? 'var(--primary)' : 'var(--border)'
+        }}
       >
         <span
           className={cn(
